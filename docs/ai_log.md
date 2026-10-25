@@ -10,15 +10,12 @@
 
 # Task 2: Inspection of Scenario D1
 
-+----------------------------------------------------------+----------------------+--------------------------------------------------------------------+
-| Defect / Error                                           | Classification       | Correction / Fix                                                   |
-+----------------------------------------------------------+----------------------+--------------------------------------------------------------------+
-| **Table sales does not exist**                           | fake method/function | from customers c left join orders o on c.customer_id=o.customer_id |
-| **Column region_name,total_sales do not exist**          | fake method/function | Replace total_sales with SUM(amount) from the orders table.        |
-| **Aggregation SUM() placed in WHERE clause**             | logic error          | where o.status = 'completed'...having SUM(o.amount) > 80000.       |
-| **claim that "North revenue grew 38% month over month"** | phantom statistic    | Reject claim. Actual North revenue changed from ₹49,900 in 2026-09 |
-|                                                          |                      | to ₹38,500 in 2026-10, representing a -22.8% decline.              |
-+----------------------------------------------------------+----------------------+--------------------------------------------------------------------+
+| Defect / Error | Classification | Correction / Fix |
+| :--- | :--- | :--- |
+| Table `sales` does not exist | `fake method/function` | Join `orders` table with `reps` table on `rep_id` to access `region_name`. |
+| Column `total_sales` does not exist | `fake method/function` | Replace `total_sales` with `SUM(amount)` from the `orders` table. |
+| Aggregation `SUM(total_sales) > 80000` inside `WHERE` clause | `logic error` | Move the aggregate condition `SUM(amount) > 80000` to a `HAVING` clause after `GROUP BY`. |
+| Claim that "North revenue grew 38% month over month" | `phantom statistic` | Reject claim. Actual North revenue changed from ₹53,500 in 2026-09 to ₹41,300 in 2026-10, representing a -22.8% decline. |
 
 
 # Task 3: Verification of Scenario D1
