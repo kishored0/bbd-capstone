@@ -6,6 +6,7 @@
 - **unit_price**: =XLOOKUP(I2,products!$A$2:$A$10,products!$C$2:$C$10,"UNKNOWN_ITEM",)
 - **revenue_calc**: =N2*J2
 
+
 # Section(b): The 5 Aggregate Results
 
 - **COUNT**: 63
@@ -14,34 +15,27 @@
 - **MIN**: 1100
 - **MAX**: 15600
 
+
 # Section(c): Pivot Tables
 
 - **Pivot Table 1: category vs region(sum of amount)**
 
-+-----------------------------------------------------+
-|Sum of amount	Column Labels                         |
-+-----------+---------+-----------+------+------------+
-| Row Labels| Apparel |Electronics| Home | Grand Total|
-+-----------+----------------------------+------------+
-| East      | 10600   | 21400     |37500 | 69500      |
-| North     | 19400   | 73400     |26500 | 119300     |
-| South     | 10000   | 28700     |43800 | 82500      |
-| West      | 37500   | 18800     |18600 | 74900      |
-+-----------+---------+-----------+------+------------+
-|Grand Total| 77500   | 142300    |126400| 346200     |
-+-----------+---------+-----------+------+------------+
+| Region (Row Labels) | Apparel (₹) | Electronics (₹) | Home (₹) | Grand Total (₹) |
+| :--- | ---: | ---: | ---: | ---: |
+| **East** | 10,600 | 21,400 | 37,500 | **69,500** |
+| **North** | 19,400 | 73,400 | 26,500 | **119,300** |
+| **South** | 10,000 | 28,700 | 43,800 | **82,500** |
+| **West** | 37,500 | 18,800 | 18,600 | **74,900** |
+| **Grand Total** | **77,500** | **142,300** | **126,400** | **346,200** |
 
 - **Pivot Table 2: monthly revenue & order volume** 
 
-+------------+--------------+----------------+
-| Row Labels | Sum of amount| Count of amount| 
-+------------+--------------+----------------+
-| 2026-09    | 98300        | 19             |
-| 2026-10    | 93100        | 20             |
-| 2026-11    | 154800       | 24             |
-+------------+--------------+----------------+
-| Grand Total| 346200       | 63             |
-+------------+--------------+----------------+
+| Month (Row Labels) | Sum of Amount (₹) | Count of Orders |
+| :--- | ---: | ---: |
+| **2026-09** | 98,300 | 19 |
+| **2026-10** | 93,100 | 20 |
+| **2026-11** | 154,800 | 24 |
+| **Grand Total** | **346,200** | **63** |
 
 
 # Section(d): Reconciliation Table
@@ -52,6 +46,7 @@
 | **Sum of Revenue by Region** | 3,46,200 | Match |
 | **Sum of Revenue by Category** | 3,46,200 | Match |
 | **Part B Pivot Grand Total** | 3,46,200 | Match |
+
 
 # Section(e): Data Validation
 
@@ -67,7 +62,7 @@
 - **Products Range:** The `products` reference table occupies the exact cell range `A1:C10` on the `products` tab.
 - **Filters & Sorts:** Applied a row filter of `status = completed` (yielding 63 matching rows) followed by a descending sort on the `amount` column prior to populating the `completed_orders` tab.
 - **XLOOKUP Test:** Performed a pre-test verification using a non-existent lookup key (`Mystery Item`) in a spare cell, confirming that the `XLOOKUP` formula correctly returns the fallback value `UNKNOWN_ITEM`.
--
+
 
 
 
