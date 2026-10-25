@@ -46,11 +46,12 @@
 
 # Section(d): Reconciliation Table
 
-**Metric**  **Spreadsheet Value**  **Part A q05 Value** **Match/Mismatch**
-  COUNT            63                   63                  Match
-  SUM             346200               346200               Match
-  AVERAGE         5495.238             5495.238             Match
-
+| Metric Source | Value | Match / Mismatch |
+| :--- | :--- | :--- |
+| **Total Revenue KPI** | 3,46,200 | Match |
+| **Sum of Revenue by Region** | 3,46,200 | Match |
+| **Sum of Revenue by Category** | 3,46,200 | Match |
+| **Part B Pivot Grand Total** | 3,46,200 | Match |
 
 # Section(e): Data Validation
 
