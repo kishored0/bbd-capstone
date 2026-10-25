@@ -1,22 +1,20 @@
 # 1.Data source
 
-+------------------+--------------------+
-|**Column Name**   | **Classification** |
-+------------------+--------------------+
-|  order_id        |   Dimension        |
-|  order_month     |   Dimension        |
-|  clean_first_name|   Dimension        |
-|  clean_last_name |   Dimension        |
-|  region          |   Dimension        |
-|  rep_name        |   Dimension        |
-|  item            |   Dimension        |
-|  category        |   Dimension        |
-|  unit_price      |   Measure          |
-|  quantity        |   Measure          |
-|  amount          |   Measure          |
-|  revenue_calc    |   Measure          |
-|  status          |   Dimension        |
-+------------------+--------------------+
+| Column Name | Classification |
+| :--- | :--- |
+| `order_id` | Dimension |
+| `order_month` | Dimension |
+| `clean_first_name` | Dimension |
+| `clean_last_name` | Dimension |
+| `region` | Dimension |
+| `rep_name` | Dimension |
+| `item` | Dimension |
+| `category` | Dimension |
+| `unit_price` | Measure |
+| `quantity` | Measure |
+| `amount` | Measure |
+| `revenue_calc` | Measure |
+| `status` | Dimension |
 
 
 # 2.KPI Cards
@@ -41,16 +39,13 @@ Specify the four required worksheets in Tableau:
 
 The total amount recorded across all regions is **3,46,200 INR**.
 
-+-----------------+-----------------+
-| Region          | Amount (INR)    |
-+-----------------+-----------------+
-| **North**       | 1,19,300        |
-| **South**       | 82,500          | 
-| **West**        | 74,900          | 
-| **East**        | 69,500          | 
-+-----------------+-----------------+
-|**Grand Total**  | **3,46,200**    |
-+-----------------+-----------------+
+| Region | Amount (INR) |
+| :--- | :--- |
+| **North** | 1,19,300 |
+| **South** | 82,500 |
+| **West** | 74,900 |
+| **East** | 69,500 |
+| **Grand Total** | **3,46,200** |
 
 
 2. **Revenue by Category**
@@ -60,13 +55,12 @@ The total amount recorded across all regions is **3,46,200 INR**.
 
 -**Data Table** : 
 
-+-----------------+---------------------+
-| Category        | Sum of Amount (INR) |
-+-----------------+---------------------+
-| Electronics     | 1,42,300            |
-| Home            | 1,26,400            |
-| Apparel         | 77,500              |
-+-----------------+---------------------+
+| Category | Sum of Amount (INR) |
+| :--- | :--- |
+| Electronics | 1,42,300 |
+| Home | 1,26,400 |
+| Apparel | 77,500 |
+
 
 3. **Revenue Trend by Month and Category**
 -Chart Type: Line Chart  
@@ -75,21 +69,19 @@ The total amount recorded across all regions is **3,46,200 INR**.
 
 -**Data Table**: 
 
-+-----------------+-------------+-----------+
-| Month           | Category    | Sum (INR) |
-+-----------------+-------------+-----------+
-| **September**   | Apparel     | 43,000    |
-| September       | Electronics | 30,600    |
-| September       | Home        | 24,700    |
-| **October**     | Apparel     | 30,600    |
-| October         | Electronics | 49,900    |
-| October         | Home        | 12,600    |
-| **November**    | Apparel     | 4,100     |
-| November        | Electronics | 61,800    |
-| November        | Home        | 89,100    |
-|+----------------+-------------+-----------+
-| **Grand Total** |             |**346,200**|
-+-----------------+-------------+-----------+
+| Month | Category | Sum (INR) |
+| :--- | :--- | :--- |
+| **September** | Apparel | 43,000 |
+| September | Electronics | 30,600 |
+| September | Home | 24,700 |
+| **October** | Apparel | 30,600 |
+| October | Electronics | 49,900 |
+| October | Home | 12,600 |
+| **November** | Apparel | 4,100 |
+| November | Electronics | 61,800 |
+| November | Home | 89,100 |
+| **Grand Total** | | **3,46,200** |
+
 
 4. **Region x Category Detail**
 -Chart Type: Text Table (Matrix) 
@@ -98,17 +90,13 @@ The total amount recorded across all regions is **3,46,200 INR**.
 
 -**Data Table**:
 
-+---------+--------+-------------+--------+-------------+
-|  Region | Apparel| Electronics | Home   | Grand Total |
-+---------+--------+-------------+--------+-------------+
-| East    | 10,600 | 21,400      | 37,500 | 69,500      |
-| North   | 19,400 | 73,400      | 26,500 | 1,19,300    |
-| South   | 10,000 | 28,700      | 43,800 | 82,500      |
-| West    | 37,500 | 18,800      | 18,600 | 74,900      |
-+---------+--------+-------------+--------+-------------+         
-|**Grand  | 77,500 | 1,42,300    |1,26,400| **3,46,200**|
-|Total**  |        |             |        |             |
-+-----------------+--------------+--------+-------------+
+| Region | Apparel | Electronics | Home | Grand Total |
+| :--- | :--- | :--- | :--- | :--- |
+| East | 10,600 | 21,400 | 37,500 | 69,500 |
+| North | 19,400 | 73,400 | 26,500 | 1,19,300 |
+| South | 10,000 | 28,700 | 43,800 | 82,500 |
+| West | 37,500 | 18,800 | 18,600 | 74,900 |
+| **Grand Total** | **77,500** | **1,42,300** | **1,26,400** | **3,46,200** |
 
 
 # 4. Dashboard Layout
@@ -153,14 +141,12 @@ Field Used: category
 
 # 6. Reconciliation Table
 
-+--------------------------------+----------+----------------+
-| Metric Source                  | Value    |Match / Mismatch|
-+--------------------------------+----------+----------------+
-| **Total Revenue KPI**          | 3,46,200 | Match          |
-| **Sum of Revenue by Region**   | 3,46,200 | Match          |
-| **Sum of Revenue by Category** | 3,46,200 | Match          |
-| **Part B Pivot Grand Total**   | 3,46,200 | Match          |
-+--------------------------------+----------+----------------+
+| Metric Source | Value | Match / Mismatch |
+| :--- | :--- | :--- |
+| **Total Revenue KPI** | 3,46,200 | Match |
+| **Sum of Revenue by Region** | 3,46,200 | Match |
+| **Sum of Revenue by Category** | 3,46,200 | Match |
+| **Part B Pivot Grand Total** | 3,46,200 | Match |
 
 
 
